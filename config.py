@@ -1,9 +1,13 @@
 import os
+import json
+
+with open('youtube_config.json') as config_file:
+    youtube_config = json.load(config_file)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config():
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = youtube_config.get('SECRET_KEY')
 
     @staticmethod
     def init_app(app):
