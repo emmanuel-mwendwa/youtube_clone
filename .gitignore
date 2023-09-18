@@ -1,4 +1,6 @@
 /env
+/dist
+/app.egg-info
 __pycache__
 youtube_config.json
 # ignore the database
